@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package test;
+
+service TestService {
+  rpc Echo (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+  string req_str = 1;
+}
+
+message TestResponse {
+  string res_str = 1;
+}
