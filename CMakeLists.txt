@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 project(test_grpc)
 
+include(cmake/Format.cmake)
+
 # 1. 设置vcpkg工具链
 set(CMAKE_TOOLCHAIN_FILE "/mnt/d/tools/vcpkg/scripts/buildsystems/vcpkg.cmake")
 

@@ -1,11 +1,12 @@
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
+
 #include <memory>
 #include <string>
 
-#include "test.pb.h"
-#include "test.grpc.pb.h"
 #include "rpc_service.h"
+#include "test.grpc.pb.h"
+#include "test.pb.h"
 
 namespace {
 
@@ -20,7 +21,7 @@ int main(int argc, char** argv) {
   // 2. 构建 gRPC 服务器
   grpc::EnableDefaultHealthCheckService(true);
   grpc::ServerBuilder builder;
-  
+
   // 3. 监听端口（非加密）
   builder.AddListeningPort(kServerAddress, grpc::InsecureServerCredentials());
   builder.RegisterService(&service);
