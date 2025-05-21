@@ -1,5 +1,5 @@
-# vcpkg 安装与编译指南
-
+# 如何运行
+> 本地缺什么自己 sudo apt-get install 就行（clang-format 需要这样手动装一下）（按照 Ubuntu 24 为例子）
 ## 1. 下载并安装 vcpkg
 1. 克隆 `vcpkg` 仓库：
 git clone https://github.com/microsoft/vcpkg.git
